@@ -1,5 +1,4 @@
-public with sharing class TestJobApplicationService {
-    public TestJobApplicationService() {
+@isTest
+private class TestJobApplicationService {
 
-    }
 }
