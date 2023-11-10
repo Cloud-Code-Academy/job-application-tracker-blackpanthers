@@ -12,9 +12,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Value1</fullName>
+                <fullName>Remote</fullName>
                 <default>false</default>
-                <label>Value1</label>
+                <label>Remote</label>
+            </value>
+            <value>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+                <label>Hybrid</label>
+            </value>
+            <value>
+                <fullName>On-site</fullName>
+                <default>false</default>
+                <label>On-site</label>
             </value>
         </valueSetDefinition>
     </valueSet>

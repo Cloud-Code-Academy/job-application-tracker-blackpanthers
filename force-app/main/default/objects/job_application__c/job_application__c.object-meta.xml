@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <actionOverrides>
         <actionName>Accept</actionName>
         <type>Default</type>
@@ -143,7 +143,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>Custom_Compact_Layout</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>This is to capture and store essential job-related details</description>
+    <description>This is to store job applications</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>true</enableFeeds>
@@ -154,14 +154,25 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>job application</label>
+    <label>Job Application</label>
     <nameField>
-        <label>job application</label>
+        <displayFormat>JB-{000}</displayFormat>
+        <label>Job Application</label>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>job applications</pluralLabel>
-    <searchLayouts></searchLayouts>
+    <pluralLabel>Job Application</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields xsi:nil></searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Position__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Application_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Salary__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>URL__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Follow_up_date__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

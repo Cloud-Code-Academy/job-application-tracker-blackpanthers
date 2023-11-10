@@ -12,9 +12,39 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Value1</fullName>
+                <fullName>Saved</fullName>
                 <default>false</default>
-                <label>Value1</label>
+                <label>Saved</label>
+            </value>
+            <value>
+                <fullName>Applying</fullName>
+                <default>false</default>
+                <label>Applying</label>
+            </value>
+            <value>
+                <fullName>Applied</fullName>
+                <default>false</default>
+                <label>Applied</label>
+            </value>
+            <value>
+                <fullName>Interviewing</fullName>
+                <default>false</default>
+                <label>Interviewing</label>
+            </value>
+            <value>
+                <fullName>Negotiating</fullName>
+                <default>false</default>
+                <label>Negotiating</label>
+            </value>
+            <value>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+                <label>Accepted</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
             </value>
         </valueSetDefinition>
     </valueSet>

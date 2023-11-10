@@ -3,7 +3,6 @@
     <fullName>All</fullName>
     <columns>NAME</columns>
     <columns>Status__c</columns>
-    <columns>Company__c</columns>
     <columns>Position__c</columns>
     <columns>Application_Date__c</columns>
     <columns>Salary__c</columns>
