@@ -80,4 +80,12 @@ public with sharing class JobApplicationService {
         } 
     }
 
+    public static void setPrimaryContacts(List<Job_Application__c> jobApplications){
+        for (Job_Application__c jobApp : jobApplications) {
+            if (jobApp.Primary_Contact__c == null) {
+                // jobApp.Primary_Contact__c = Contact...
+            }
+        }
+    }
+
 }
