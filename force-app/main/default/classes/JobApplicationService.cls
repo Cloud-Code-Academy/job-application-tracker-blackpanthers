@@ -81,9 +81,28 @@ public with sharing class JobApplicationService {
     }
 
     public static void setPrimaryContacts(List<Job_Application__c> jobApplications){
+        List<Job_Application__c> jobAppsToUpdate = new List<Job_Application__c>();
+        Map<Id, Contact> companyToContactMap = new Map<Id, Contact>();
+        Set<Id> companyIds = new Set<Id>();
+
         for (Job_Application__c jobApp : jobApplications) {
             if (jobApp.Primary_Contact__c == null) {
-                // jobApp.Primary_Contact__c = Contact...
+                companyIds.add(jobApp.Company__c);
+            }
+        }
+
+        List<Contact> relatedContacts = [SELECT Id, Name, AccountId FROM Contact WHERE AccountId IN :companyIds];
+
+        for (Contact relatedContact : relatedContacts) {
+            if (!companyToContactMap.containsKey(relatedContact.AccountId)) {
+                companyToContactMap.put(relatedContact.AccountId, relatedContact);
+            }
+        }
+
+        for (Job_Application__c jobApp : jobApplications) {
+            if (jobApp.Primary_Contact__c == null && companyToContactMap.containsKey(jobApp.Company__c)) {
+                jobApp.Primary_Contact__c = companyToContactMap.get(jobApp.Company__c).Id;
+                jobAppsToUpdate.add(jobApp);
             }
         }
     }

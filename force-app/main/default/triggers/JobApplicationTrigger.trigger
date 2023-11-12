@@ -3,9 +3,6 @@ trigger JobApplicationTrigger on Job_Application__c (before insert, after insert
         when BEFORE_INSERT {
             JobApplicationTriggerHandler.handleBeforeInsert(Trigger.new);
         }
-        when AFTER_INSERT {
-            JobApplicationTriggerHandler.handleAfterInsert(Trigger.new);
-        }
         when AFTER_UPDATE {
             JobApplicationTriggerHandler.handleAfterUpdate(Trigger.new);
         }
