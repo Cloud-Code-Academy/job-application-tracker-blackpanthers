@@ -6,7 +6,7 @@ public with sharing class JobApplicationService {
             if (jobApp.Status__c == 'Saved') {
                 Task task = new Task();
                 task.Subject = 'Check Career Alignment/Interest!';
-                task.Description = 'Check if the job description aligns with your interests and values.     Review the highlighted skills to see if the role is a good fit. Research the company or role and mark your excitement level';
+                task.Description = 'Check if the job description aligns with your interests and values. Review the highlighted skills to see if the role is a good fit. Research the company or role and mark your excitement level';
                 task.WhatId = jobApp.Id;  
                 task.ActivityDate = Date.today().addDays(1);
                 task.Priority = 'Normal';
