@@ -13,7 +13,7 @@ public with sharing class JobApplicationService {
         
                 tasks.add(task);
             }  
-            else if (jobApp.Status__c == 'APPLYING'){
+            else if (jobApp.Status__c == 'Applying'){
                 Task task = new Task();
                 task.Subject = 'Get an insider!';
                 task.Description = 'Find and research someone who works at the company and add them as a contact. Set up an informational interview to learn more about the role/company. Identify potential referrals to help get your application on the top of the pile. Customize your work achievements using the job description keywords. Submit your application on the company website if possible';
@@ -23,7 +23,7 @@ public with sharing class JobApplicationService {
         
                 tasks.add(task);
             } 
-            else if (jobApp.Status__c == 'APPLIED'){
+            else if (jobApp.Status__c == 'Applied'){
                 Task task = new Task();
                 task.Subject = 'Apply/Follow-Up!';
                 task.Description = 'Reach out to the hiring manager or recruiter. Follow up on your application via email weekly. Continue identifying and saving similar job opportunities. Set up weekly networking calls to explore similar companies/roles';
@@ -33,7 +33,7 @@ public with sharing class JobApplicationService {
         
                 tasks.add(task);
             } 
-            else if (jobApp.Status__c == 'INTERVIEWING'){
+            else if (jobApp.Status__c == 'Interviewing'){
                 Task task = new Task();
                 task.Subject = 'Prepare for the interview!';
                 task.Description = 'Prepare your blurb or “tell me about yourself” response. Practice answering behavioral interview questions. Research the company and your interviewers. Set up your virtual interview space and test your tech. Send thank you emails within 24 hours';
@@ -43,7 +43,7 @@ public with sharing class JobApplicationService {
         
                 tasks.add(task);
             } 
-            else if (jobApp.Status__c == 'NEGOTIATING'){
+            else if (jobApp.Status__c == 'Negotiating'){
                 Task task = new Task();
                 task.Subject = 'Prepare to Negotiate!';
                 task.Description = 'Research your market value and know your numbers. Prepare your negotiation scripts. Evaluate your offer and decline or accept';
@@ -53,7 +53,7 @@ public with sharing class JobApplicationService {
         
                 tasks.add(task);
             } 
-            else if (jobApp.Status__c == 'ACCEPTED'){
+            else if (jobApp.Status__c == 'Accepted'){
                 Task task = new Task();
                 task.Subject = 'Prepare to resume!';
                 task.Description = 'Plan your resignation if applicable. Take some time to relax and recharge. Prepare for your first day of onboarding';
@@ -63,7 +63,7 @@ public with sharing class JobApplicationService {
         
                 tasks.add(task);
             } 
-            else if (jobApp.Status__c == 'CLOSED'){
+            else if (jobApp.Status__c == 'Closed'){
                 Task task = new Task();
                 task.Subject = 'Close gracefully!';
                 task.Description = 'Send a follow-up email thanking the interviewer and asking for feedback. Review your notes and reflect on areas of improvement';
