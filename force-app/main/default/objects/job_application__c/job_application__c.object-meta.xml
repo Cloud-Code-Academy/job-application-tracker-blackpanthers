@@ -159,10 +159,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Job Application</label>
     <nameField>
-        <displayFormat>JB-{000}</displayFormat>
         <label>Job Application</label>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Job Application</pluralLabel>
     <searchLayouts>
