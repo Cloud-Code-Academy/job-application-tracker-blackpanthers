@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <actionOverrides>
         <actionName>Accept</actionName>
         <type>Default</type>
@@ -141,26 +141,32 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Custom_Compact_Layout</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>false</enableActivities>
+    <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Job Application Contact</label>
+    <label>Job Interview</label>
     <nameField>
-        <displayFormat>JA-{0000}</displayFormat>
-        <label>Job Application Contact Name</label>
+        <displayFormat>JI-{0000}</displayFormat>
+        <label>Job Interview</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Job Application Contacts</pluralLabel>
-    <searchLayouts></searchLayouts>
+    <pluralLabel>Job Interviews</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Interview_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields xsi:nil></searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Interview_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Interview_Format__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Note__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

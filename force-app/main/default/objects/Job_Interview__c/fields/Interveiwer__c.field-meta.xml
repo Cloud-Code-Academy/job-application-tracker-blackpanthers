@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Company__c</fullName>
+    <fullName>Interveiwer__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Company</label>
-    <referenceTo>Account</referenceTo>
-    <relationshipLabel>Job Application</relationshipLabel>
-    <relationshipName>Job_Application</relationshipName>
+    <label>Interveiwer</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Job Interviews</relationshipLabel>
+    <relationshipName>Job_Interviews</relationshipName>
     <required>false</required>
-    <trackFeedHistory>false</trackFeedHistory>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
 </CustomField>
