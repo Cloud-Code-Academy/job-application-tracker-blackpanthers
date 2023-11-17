@@ -30,25 +30,22 @@ private class TestJobApplicationService {
         jobApps.add(jobApp4);
         jobApps.add(jobApp5);
         jobApps.add(jobApp6);
-    
-        
-        insert jobApps;
 
         Test.startTest();
-        JobApplicationService.createTasks(jobApps);
+        JobApplicationService.createTasks(jobApps, null);
         Test.stopTest();
 
         List<Task> tasks = [SELECT Id, WhatId, Subject FROM Task WHERE WhatId = :jobApps];
 
         Assert.areEqual(jobApps.size(), tasks.size(), 'One task should be created for each Job');
+        Assert.areEqual(jobApps.size(), tasks.size(), 'One task should be created for each Job');
     }
 
     @isTest static void testCreateTasksNegative(){
         Job_Application__c jobApp = new Job_Application__c();
-        insert jobApp;
 
         Test.startTest();
-        JobApplicationService.createTasks(new List<Job_Application__c>{jobApp});
+        JobApplicationService.createTasks(new List<Job_Application__c>{jobApp}, null);
         Test.stopTest();
 
         List<Task> tasks = [SELECT Id, WhatId, Subject FROM Task WHERE WhatId = :jobApp.Id];
