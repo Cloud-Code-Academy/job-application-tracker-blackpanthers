@@ -155,14 +155,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Job Application Contact</label>
     <nameField>
-<<<<<<< HEAD
         <displayFormat>JA-{0000}</displayFormat>
         <label>Job Application Contact Name</label>
         <type>AutoNumber</type>
-=======
-        <label>Job Application Contact Name</label>
-        <type>Text</type>
->>>>>>> automation-trigger
     </nameField>
     <pluralLabel>Job Application Contacts</pluralLabel>
     <searchLayouts></searchLayouts>
