@@ -162,7 +162,7 @@
     <pluralLabel>Job Interviews</pluralLabel>
     <searchLayouts>
         <searchResultsAdditionalFields>Interview_Date__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields xsi:nil></searchResultsAdditionalFields>
+        <!-- <searchResultsAdditionalFields xsi:nil></searchResultsAdditionalFields> -->
         <searchResultsAdditionalFields>Interview_Type__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Interview_Format__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Note__c</searchResultsAdditionalFields>

@@ -15,7 +15,7 @@
     <label>Job Tracker</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
-    <tabs>Job_Application__c</tabs>
+    <tabs>job_application__c</tabs>
     <tabs>standard-Task</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>

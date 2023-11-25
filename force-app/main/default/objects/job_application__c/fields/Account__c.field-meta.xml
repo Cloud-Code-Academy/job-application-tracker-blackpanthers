@@ -5,8 +5,8 @@
     <externalId>false</externalId>
     <label>Account</label>
     <referenceTo>Account</referenceTo>
-    <relationshipLabel>Job Application</relationshipLabel>
-    <relationshipName>Job_Application</relationshipName>
+    <relationshipLabel>Job ApplicationAcc</relationshipLabel>
+    <relationshipName>Job_ApplicationAcc</relationshipName>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackTrending>false</trackTrending>

@@ -167,7 +167,7 @@
     <pluralLabel>Job Application</pluralLabel>
     <searchLayouts>
         <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields xsi:nil></searchResultsAdditionalFields>
+        <!-- <searchResultsAdditionalFields xsi:nil></searchResultsAdditionalFields> -->
         <searchResultsAdditionalFields>Position__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Application_Date__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Salary__c</searchResultsAdditionalFields>
