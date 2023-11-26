@@ -9,6 +9,7 @@ public with sharing class JobApplicationService {
             String oldStatus = (oldMap != null && oldMap.containsKey(jobApp.Id)) ? oldMap.get(jobApp.Id).Status__c : null;
             String newStatus = jobApp.Status__c;
 
+            // This is a validation rule that could be done using declarative means as well
             if (newStatus == null) {
                 jobApp.addError('Status cannot be null');
                 continue;
@@ -23,6 +24,11 @@ public with sharing class JobApplicationService {
         insertTasks(tasks);
     }
 
+    /**
+     * Creates automation to create tasks when job application status is changed. 
+     * Each task should have a due date, subject, and priority, 
+     * making it easier to track what needs to be done and when
+     */
     private static Task createTaskForJobApplication(Job_Application__c jobApp, String newStatus) {
         Task task = new Task();
         task.WhatId = jobApp.Id;
@@ -73,7 +79,11 @@ public with sharing class JobApplicationService {
             insert tasks;
         }
     }
-        
+    
+    /**
+     * Primary Contact: Creates automation to always have the important 
+     * contacts on the job application record
+     */
     public static void setPrimaryContacts(List<Job_Application__c> jobApps) {
         Set<Id> companyIds = new Set<Id>();
         Map<Id, Id> jobAppToUpdateMap = new Map<Id, Id>();
@@ -94,8 +104,7 @@ public with sharing class JobApplicationService {
         for (Job_Application__c jobApp : jobApps) {
             Id companyId = jobAppToUpdateMap.get(jobApp.Id);
             if (companyId != null && companyToContactMap.containsKey(companyId)) {
-                Id contactId = companyToContactMap.get(companyId).Id;
-    
+                Id contactId = companyToContactMap.get(companyId).Id;    
                 jobApp.Primary_Contact__c = contactId;
             }
         }

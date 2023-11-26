@@ -1,4 +1,8 @@
 public with sharing class EventService {
+    /**
+     * Meeting Validation: Create validations so that interview meetings cannot overlap. 
+     * This will reduce the chance of double booking and missing an interview. 
+     */
     public static void preventDuplicateEvents(List<Event> newEvents) {
         Set<DateTime> existingEventStartDates = new Set<DateTime>();
         List<DateTime> newEventStartDates = new List<DateTime>();

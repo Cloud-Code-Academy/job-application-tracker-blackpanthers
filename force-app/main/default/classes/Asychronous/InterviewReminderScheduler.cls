@@ -2,6 +2,10 @@ public class InterviewReminderScheduler implements Schedulable {
 
     public static final String CRON = '0 0 0 * * ?';
 
+    /**
+     * Email Notifications: Create a feature that sends an email notification to 
+     * the user a day before their scheduled interview.
+     */
     public void execute(SchedulableContext sc) {
 
         Date tomorrow = Date.today().addDays(1);
@@ -23,8 +27,6 @@ public class InterviewReminderScheduler implements Schedulable {
 
         for (Job_Interview__c interview : interviews) {
             Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
-
-            // email.setTemplateId('');
 
             email.setSubject('Interview Reminder');
             email.setHtmlBody('<html><body>This is to remind you of ' + interview.Interview_Type__c + '</body></html>');
