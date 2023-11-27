@@ -11,34 +11,35 @@
                         label="Income"
                         value={income}
                         onchange={handleChange}
+                        onblur={handleCalculate}
                     ></lightning-input>
                     <lightning-input
                         type="number"
                         name="salarydeductions"
                         label="Salary Deductions"
                         value={salaryDeductions}
-                        readonly
+                        disabled
                     ></lightning-input>
                     <lightning-input
                         type="number"
                         name="federalTax"
                         label="Federal Tax"
                         value={federalWithholding}
-                        readonly
+                        disabled
                     ></lightning-input>
                     <lightning-input
                         type="number"
                         name="medicare"
                         label="Medicare"
                         value={medicareWithholding}
-                        readonly
+                        disabled
                     ></lightning-input>
                     <lightning-input
                         type="number"
                         name="socialsecurity"
                         label="Social Security"
                         value={socialSecurityWithholding}
-                        readonly
+                        disabled
                     ></lightning-input>
                 </div>
             </div>
@@ -49,35 +50,35 @@
                         name="taxableincome"
                         label="Taxable Income"
                         value={taxableIncome}
-                        readonly
+                        disabled
                     ></lightning-input>
                     <lightning-input
                         type="number"
                         name="takehomepay"
                         label="Take-home Pay"
                         value={takeHomePay}
-                        readonly
+                        disabled
                     ></lightning-input>
                     <lightning-input
                         type="number"
                         name="semiannualpay"
                         label="Semestral Pay"
                         value={semiAnnualPay}
-                        readonly
+                        disabled
                     ></lightning-input>
                     <lightning-input
                         type="number"
                         name="monthlypay"
                         label="Monthly Pay"
                         value={monthlyPay}
-                        readonly
+                        disabled
                     ></lightning-input>
                     <lightning-input
                         type="number"
                         name="biweeklypay"
                         label="Biweekly Pay"
                         value={biWeeklyPay}
-                        readonly
+                        disabled
                     ></lightning-input>
                 </div>
             </div>

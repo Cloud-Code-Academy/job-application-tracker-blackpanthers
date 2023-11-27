@@ -38,7 +38,7 @@ export default class TakeHomePayCalculator extends LightningElement {
     wiredRecord({ error, data }) {
         if (data) {
             this.income = data.fields.Salary__c.value;
-            console.log('***income:', this.income);
+            // console.log('***income:', this.income);
             this.handleCalculate();
         } else if (error) {
             console.error('***Error loading record', error);
@@ -62,20 +62,18 @@ export default class TakeHomePayCalculator extends LightningElement {
         this.semiAnnualPay  = (this.takeHomePay / 2).toFixed(2);
         this.monthlyPay     = (this.takeHomePay / 12).toFixed(2);
         this.biWeeklyPay    = (this.takeHomePay / 26).toFixed(2);
-
     }
 
     calculateFederalTax() {
         // Calculate the federal tax based on the income
         let federalTax = 0;
         let incomeMinusStandardSingleDeduction = this.income - standardSingleDeduction;
-        console.log('***incomeMinusStandardSingleDeduction: ', incomeMinusStandardSingleDeduction);
+        // console.log('***incomeMinusStandardSingleDeduction: ', incomeMinusStandardSingleDeduction);
         
         for (const bracket of federalTaxBrackets) {
             if (incomeMinusStandardSingleDeduction <= bracket.max || !bracket.max) {
-                console.log('***bracket.rate: ', bracket.rate);
+                // console.log('***bracket.rate: ', bracket.rate);
                 federalTax = (bracket.rate * (incomeMinusStandardSingleDeduction - bracket.min)) + (bracket.min * bracket.rate);
-
                 break;
             }
         }
@@ -87,4 +85,17 @@ export default class TakeHomePayCalculator extends LightningElement {
         const fieldName = event.target.label;
         this[fieldName.toLowerCase()] = parseFloat(event.target.value);
     }
+
+    handleInputFocus(event) {
+        // modify parent to properly highlight visually
+        const classList = event.target.parentNode.classList;
+        classList.add('lgc-highlight');
+    }
+
+    handleInputBlur(event) {
+        // modify parent to properly remove highlight
+        const classList = event.target.parentNode.classList;
+        classList.remove('lgc-highlight');
+    }
+
 }

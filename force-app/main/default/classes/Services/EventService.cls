@@ -23,6 +23,7 @@ public with sharing class EventService {
             if (newEvent.StartDateTime != null) {
                 if (existingEventStartDates.contains(newEvent.StartDateTime)) {
                     newEvent.addError('Another event with the same start date/time already exists.');
+                    break;
                 }
             }
         }
