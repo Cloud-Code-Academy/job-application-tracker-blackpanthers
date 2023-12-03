@@ -1,0 +1,87 @@
+<template>
+    <lightning-button variant="brand" class="slds-var-m-left_x-small"></lightning-button>
+    <lightning-card title="Take Home Pay Calculator">
+        <lightning-button variant="brand"  label="Calculate" title="Calculate" slot="actions" onclick={handleCalculate}></lightning-button>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <div class="slds-var-p-horizontal_small">        
+                    <lightning-input
+                        type="number"
+                        name="income"
+                        label="Income"
+                        value={income}
+                        onchange={handleChange}
+                        onblur={handleCalculate}
+                    ></lightning-input>
+                    <lightning-input
+                        type="number"
+                        name="salarydeductions"
+                        label="Salary Deductions"
+                        value={salaryDeductions}
+                        disabled
+                    ></lightning-input>
+                    <lightning-input
+                        type="number"
+                        name="federalTax"
+                        label="Federal Tax"
+                        value={federalWithholding}
+                        disabled
+                    ></lightning-input>
+                    <lightning-input
+                        type="number"
+                        name="medicare"
+                        label="Medicare"
+                        value={medicareWithholding}
+                        disabled
+                    ></lightning-input>
+                    <lightning-input
+                        type="number"
+                        name="socialsecurity"
+                        label="Social Security"
+                        value={socialSecurityWithholding}
+                        disabled
+                    ></lightning-input>
+                </div>
+            </div>
+            <div class="slds-col">
+                <div class="slds-var-p-horizontal_small">
+                    <lightning-input
+                        type="number"
+                        name="taxableincome"
+                        label="Taxable Income"
+                        value={taxableIncome}
+                        disabled
+                    ></lightning-input>
+                    <lightning-input
+                        type="number"
+                        name="takehomepay"
+                        label="Take-home Pay"
+                        value={takeHomePay}
+                        disabled
+                    ></lightning-input>
+                    <lightning-input
+                        type="number"
+                        name="semiannualpay"
+                        label="Semestral Pay"
+                        value={semiAnnualPay}
+                        disabled
+                    ></lightning-input>
+                    <lightning-input
+                        type="number"
+                        name="monthlypay"
+                        label="Monthly Pay"
+                        value={monthlyPay}
+                        disabled
+                    ></lightning-input>
+                    <lightning-input
+                        type="number"
+                        name="biweeklypay"
+                        label="Biweekly Pay"
+                        value={biWeeklyPay}
+                        disabled
+                    ></lightning-input>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>
